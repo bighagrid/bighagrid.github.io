@@ -1,12 +1,175 @@
-<html>
-<title>bighagrid.github.io</title>
-<body bgcolor=black text=limegreen>
-<center>
-	<h1>5th Edition D&D Helper Tools</h1>
-	<h2><a href='https://bighagrid.github.io/5epickpocket/'>Pickpocketing Calculator</a></h2><br>
-	<h2><a href='https://bighagrid.github.io/5etravel/'>Mounts and Vehicles Calculator</a></h2><br>
-	<h2><a href='https://bighagrid.github.io/5eHexMap/'>Realms Overland Map with 5 mile hex grid</a></h2><br>
-</center>
+<HTML>
+<HEAD>
+<TITLE>bighagrid.github.io</TITLE>
+<STYLE>
+td {  
+	font-family: arial; 
+	font-size: 14px
+	}
+.hotspot {
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	cursor: help;
+}
+.hotspotall {
+	color: #FF6600;
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	cursor: help;
+	font-weight: bold;
+}	
+a {
+line-height: 150%;
+}
+</STYLE>
+<SCRIPT>
+var bordercolor='#006600';
+var bgcolorpage='#FFFFFF';		
+var bgcolorbody='#AAAAAA';
+var bgcolorbody2='#FFFFFF';
+var bgcolorhead='#408c28';
+var textcolorhead='#939393';
+var background="images/blines.png";
 
-</body>
-</html>
+var b1Title="My D&D Tools";
+var b1={
+"Pickpocket Calculator":"https://bighagrid.github.io/5epickpocket/",
+"Mounts and Vehicles Calculator":"https://bighagrid.github.io/5etravel/",
+"Realms Overland Map with 5 mile hex grid":"https://bighagrid.github.io/5eHexMap/"
+};
+
+var b4Title="Online D&D Tools";
+var b4={
+"Obsidian Portal Campaign Wikis":"https://www.obsidianportal.com/",
+"Fantasy Calendars":"https://app.fantasy-calendar.com/calendars",
+"HeroForge Custom Minis":"https://www.heroforge.com/",
+"Thieves Guild Downtime Calculators":"https://www.thievesguild.cc/core/downtime/",
+"Thieves Guild Magical Trinkets":"https://www.thievesguild.cc/tables/trinkets-magic",
+"5e Magic Shop Calculators":"https://5emagic.shop/",
+"Donjon's Random Generator":"https://donjon.bin.sh/5e/random/",
+"Fantasy Name Generator":"https://www.fantasynamegenerators.com/",
+"Ledger+ (Alt Magic Items) - The Griffon's Saddlebag":"https://ledger.thegriffonssaddlebag.com/"
+};
+
+var b5Title="Mapping Tools";
+var b5={
+"Inkarnate":"https://inkarnate.com/",
+"Grid Mapper":"https://campaignwiki.org/gridmapper.svg",
+"Mike Schley Maps":"https://prints.mikeschley.com/",
+"Token Stamp":"https://rolladvantage.com/tokenstamp/",
+"Dungeon Scrawl":"https://probabletrain.itch.io/dungeon-scrawl"
+};
+
+
+var b2Title="D&D Links";
+var b2={
+"D&D WoTC":"https://dnd.wizards.com/",
+"D&D Beyond":"https://www.dndbeyond.com/",
+"D&D Beyond - My Characters":"https://www.dndbeyond.com/characters",
+"D&D Beyond - My Campaigns":"https://www.dndbeyond.com/my-campaigns",
+"D&D Beyond - My Encounters":"https://www.dndbeyond.com/my-encounters"
+};
+
+var b3Title="Forgotten Realms Links";
+var b3={
+"Forgotten Realms Wiki":"https://forgottenrealms.fandom.com/wiki/Main_Page",
+"Waterdeep Interactive Map":"https://www.aidedd.org/atlas/index.php?map=W&l=1"
+};
+
+
+
+function block(title, content, body) {
+	var block="";
+	var mainBlock="";
+	
+	if (body) {
+		var blockAlign="CENTER";
+		var blockWidth="100%";
+	} else {
+		var blockAlign="LEFT";
+		var blockWidth="100%";	
+	}
+	
+	var preBlock = "<TABLE border=1 cellpadding=2 cellspacing=0 width="+blockWidth+" bordercolor="+bordercolor+"><TR><TD ALIGN="+blockAlign+" VALIGN=MIDDLE BGCOLOR="+bgcolorhead+">"+title+"</TD></TR><TR><TD ALIGN=LEFT VALIGN=MIDDLE BGCOLOR="+bgcolorbody+"><FONT Size=5>";
+	
+	mainBlock="<UL>";		
+	for (var link in content) {
+		var URL = content[link];
+		mainBlock=mainBlock+"<li><A HREF='"+URL+"' target='_BLANK'>"+link+"</A>";
+	}			
+	mainBlock=mainBlock+"</UL>";
+	var postBlock = "</font></TD></TR></TABLE>";
+
+	block = preBlock+mainBlock+postBlock;
+
+	return block;	
+}
+
+function titleblock (btitle) {
+	return "<TABLE border=1 cellpadding=2 cellspacing=0 width=100% bordercolor="+bordercolor+"><TR><TD ALIGN=CENTER VALIGN=MIDDLE BGCOLOR="+bgcolorhead+"><FONT size=6 face='Helvetica'>"+btitle+"</TD></TR></TABLE>";
+}
+
+function bigScreen() {
+
+return "</TABLE></TD><TD width=100% valign=top><TABLE border=0 cellpadding=3 cellspacing=0 width=100%>";
+
+}
+
+
+</SCRIPT>
+</HEAD>
+<BODY background='images/blines.png'>
+<center>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 width=100%>
+<TR><TD colspan=2>
+<TABLE border=0 cellpadding=3 cellspacing=0 width=100%>
+	<TR><TD><script>document.write(titleblock("BigHagrid's D&D Resources"));</script></TD></TR>
+</TABLE>
+<!-- END TITLE BAR -->
+</TD></TR>
+<TR><TD width=50% valign=top>
+<!-- BEGIN LEFT COL -->
+<TABLE border=0 cellpadding=3 cellspacing=0 width=100%>
+<TR>
+	<TD>
+		<script>document.write(block(b2Title,b2, false));</script>
+	</td>
+</tr>
+<TR>
+	<TD>
+		<script>document.write(block(b3Title,b3, false));</script>
+	</td>
+</tr>
+
+<script>
+var width=window.screen.width;
+
+if (width>480) {
+document.write(bigScreen());
+}
+
+
+</script>
+
+<TR>
+	<TD>
+		<script>document.write(block(b1Title,b1, false));</script>
+	</td>
+</tr>
+<TR>
+	<TD>
+		<script>document.write(block(b4Title,b4, false));</script>
+	</td>
+</tr>
+<TR>
+	<TD>
+		<script>document.write(block(b5Title,b5, false));</script>
+	</td>
+</tr>
+</TABLE>
+<!-- END RIGHT COL -->
+</TD></TR>
+</TABLE>
+</CENTER>
+</BODY>
+</HTML>
