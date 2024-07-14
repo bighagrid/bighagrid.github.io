@@ -94,9 +94,20 @@ var b6={
 var b3Title="Forgotten Realms Links";
 var b3={
 "Forgotten Realms Wiki":"https://forgottenrealms.fandom.com/wiki/Main_Page",
+"Forgotten Maps":"https://forgottenmaps.com/",
+"Sword Coast Interactive Map":"https://www.aidedd.org/atlas/index.php?map=R&l=1",
 "Waterdeep Interactive Map":"https://www.aidedd.org/atlas/index.php?map=W&l=1"
 };
 
+var b7Title="Patreon Resources";
+var b7={
+"Morvold Press (Battlemaps)*":"https://www.patreon.com/morvoldpress/posts",	
+"Tych Maps (Battlemaps)*":"https://www.patreon.com/tychmaps/posts",
+"The Epic Atlas: Mike Schley (Maps & Battlemaps)":"https://www.patreon.com/TheEpicAtlas/posts",
+"Ed Greenwood (FR Lore)":"https://www.patreon.com/EdGreenwood/posts",
+"Cyrens Maps (Battlemaps)":"https://www.patreon.com/CyrensMaps/posts",
+"Detailing the Realms (Battlemaps)":"https://www.patreon.com/detailingtherealm/posts"
+};
 
 
 function block(title, content, body) {
@@ -159,6 +170,12 @@ return "</TABLE></TD><TD width=100% valign=top><TABLE border=0 cellpadding=3 cel
 <TR>
 	<TD>
 		<script>document.write(block(b3Title,b3, false));</script>
+	</td>
+</tr>
+
+<TR>
+	<TD>
+		<script>document.write(block(b7Title,b7, false));</script>
 	</td>
 </tr>
 
