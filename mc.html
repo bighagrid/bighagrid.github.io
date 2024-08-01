@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+<TITLE>BigHagrid's Minecraft Links</TITLE>
+<STYLE>
+td {  
+	font-family: arial; 
+	font-size: 14px
+	}
+.hotspot {
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	cursor: help;
+}
+.hotspotall {
+	color: #FF6600;
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	cursor: help;
+	font-weight: bold;
+}	
+a {
+line-height: 150%;
+}
+</STYLE>
+<SCRIPT>
+var bordercolor='#006600';
+var bgcolorpage='#FFFFFF';		
+var bgcolorbody='#CCCCCC';
+var bgcolorbody2='#FFFFFF';
+var bgcolorhead='#408c28';
+var textcolorhead='#939393';
+var background="images/blines.png";
+
+var b1Title="Official Minecraft Links";
+var b1={
+"Minecraft.Net":"https://www.minecraft.net/",
+"My Profile":"https://www.minecraft.net/en-us/msaprofile",
+"Minecraft Wiki":"https://minecraft.wiki/"
+};
+
+var b2Title="Helper Tools";
+var b2={
+"Chunkbase Minecraft Apps":"https://misode.github.io/recipe/",
+"Minecraft Tools":"https://minecraft.tools/",
+"/Command Generators":"https://www.digminecraft.com/generators/index.php",
+"Misode's Recipe Generator":"https://misode.github.io/recipe/",
+"Crafting JSON":"https://crafting.thedestruc7i0n.ca/",
+"MC Names and Skins":"https://namemc.com/"
+};
+
+
+function block(title, content, body) {
+	var block="";
+	var mainBlock="";
+	
+	if (body) {
+		var blockAlign="CENTER";
+		var blockWidth="100%";
+	} else {
+		var blockAlign="LEFT";
+		var blockWidth="100%";	
+	}
+	
+	var preBlock = "<TABLE border=1 cellpadding=2 cellspacing=0 width="+blockWidth+" bordercolor="+bordercolor+"><TR><TD ALIGN="+blockAlign+" VALIGN=MIDDLE BGCOLOR="+bgcolorhead+">"+title+"</TD></TR><TR><TD ALIGN=LEFT VALIGN=MIDDLE BGCOLOR="+bgcolorbody+"><FONT Size=5>";
+	
+	mainBlock="<UL>";		
+	for (var link in content) {
+		var URL = content[link];
+		mainBlock=mainBlock+"<li><A HREF='"+URL+"' target='_BLANK'>"+link+"</A>";
+	}			
+	mainBlock=mainBlock+"</UL>";
+	var postBlock = "</font></TD></TR></TABLE>";
+
+	block = preBlock+mainBlock+postBlock;
+
+	return block;	
+}
+
+function titleblock (btitle) {
+	return "<TABLE border=1 cellpadding=2 cellspacing=0 width=100% bordercolor="+bordercolor+"><TR><TD ALIGN=CENTER VALIGN=MIDDLE BGCOLOR="+bgcolorhead+"><FONT size=6 face='Helvetica'>"+btitle+"</TD></TR></TABLE>";
+}
+
+function bigScreen() {
+
+return "</TABLE></TD><TD width=100% valign=top><TABLE border=0 cellpadding=3 cellspacing=0 width=100%>";
+
+}
+
+
+</SCRIPT>
+</HEAD>
+<BODY background='images/blines.png'>
+<center>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 width=100%>
+<TR><TD colspan=2>
+<TABLE border=0 cellpadding=3 cellspacing=0 width=100%>
+	<TR><TD><script>document.write(titleblock("BigHagrid's D&D Resources"));</script></TD></TR>
+</TABLE>
+<!-- END TITLE BAR -->
+</TD></TR>
+<TR><TD width=50% valign=top>
+<!-- BEGIN LEFT COL -->
+<TABLE border=0 cellpadding=3 cellspacing=0 width=100%>
+
+<TR>
+	<TD>
+		<script>document.write(block(b1Title,b1, false));</script> <!-- My D&D Tools -->
+	</TD>
+</TR>	
+
+<!-- Column Break -->
+<script>
+var width=window.screen.width;
+
+if (width>480) {
+document.write(bigScreen());
+}
+</script>
+<!-- END Column Break -->
+
+<TR>
+	<TD>
+		<script>document.write(block(b2Title,b2, false));</script> <!-- My D&D Tools -->
+	</TD>
+</TR>	
+
+
+</TABLE>
+<!-- END RIGHT COL -->
+</TD></TR>
+</TABLE>
+</CENTER>
+</BODY>
+</HTML>
