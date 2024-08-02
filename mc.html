@@ -21,6 +21,9 @@ td {
 a {
 line-height: 150%;
 }
+.left {
+float: left;
+}
 </STYLE>
 <SCRIPT>
 var bordercolor='#006600';
@@ -107,7 +110,7 @@ function block(title, content, body) {
 }
 
 function titleblock (btitle) {
-	return "<TABLE border=1 cellpadding=2 cellspacing=0 width=100% bordercolor="+bordercolor+"><TR><TD ALIGN=CENTER VALIGN=MIDDLE BGCOLOR="+bgcolorhead+"><FONT size=6 face='Helvetica'>"+btitle+"</TD></TR></TABLE>";
+	return "<TABLE border=1 cellpadding=2 cellspacing=0 width=100% bordercolor="+bordercolor+"><TR><TD ALIGN=CENTER VALIGN=MIDDLE BGCOLOR="+bgcolorhead+"><div class='left'><A HREF='index.html'><IMG width=40px src='images/back-button.png'></A></div><FONT size=6 face='Helvetica'>"+btitle+"</FONT></TD></TR></TABLE>";
 }
 
 function bigScreen() {
@@ -176,7 +179,7 @@ document.write(bigScreen());
 </TABLE>
 <!-- END RIGHT COL -->
 </TD></TR>
-</TABLE>.
+</TABLE>
 </CENTER>
 </BODY>
 </HTML>
