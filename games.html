@@ -80,10 +80,12 @@ var b5={
 var b6Title="Strategy/Maps/Clues";
 var b6={
 "GameBanshee":"https://www.gamebanshee.com/",
+"GameFaq":"https://gamefaqs.gamespot.com/",
 "Map Genie":"https://mapgenie.io/",
 "Strategy Wiki":"https://strategywiki.org/",
 "<hr>":"",
-"Neverwinter Nights":"https://www.gamebanshee.com/neverwinternights/"
+"Neverwinter Nights":"https://www.gamebanshee.com/neverwinternights/",
+"Neverwinter Nights 2":"https://gamefaqs.gamespot.com/pc/922154-neverwinter-nights-2/faqs"
 };
 
 
@@ -104,7 +106,11 @@ function block(title, content, body) {
 	mainBlock="<UL>";		
 	for (var link in content) {
 		var URL = content[link];
-		mainBlock=mainBlock+"<li><A HREF='"+URL+"' target='_BLANK'>"+link+"</A>";
+		if (link=="<hr>") {
+			mainBlock=mainBlock+"<HR>";
+		} else {
+			mainBlock=mainBlock+"<li><A HREF='"+URL+"' target='_BLANK'>"+link+"</A>";
+		}
 	}			
 	mainBlock=mainBlock+"</UL>";
 	var postBlock = "</font></TD></TR></TABLE>";
