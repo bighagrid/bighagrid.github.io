@@ -58,9 +58,7 @@ var b3Title="Helper Tools";
 var b3={
 "Curseforge":"https://www.curseforge.com/",
 "Doxbox":"https://www.dosbox.com/",
-"Heroic Games Launcer":"https://heroicgameslauncher.com/",
-"Map Genie":"https://mapgenie.io/",
-"Strategy Wiki":"https://strategywiki.org/"
+"Heroic Games Launcer":"https://heroicgameslauncher.com/"
 };
 
 var b4Title="Online Games";
@@ -70,9 +68,16 @@ var b4={
 
 var b5Title="Game Companies";
 var b5={
-"Blizzard":"https://blizzard.com"
+"Aspyr":"https://www.aspyr.com/",
+"Blizzard":"https://blizzard.com",
+"Xbox Game Studios":"https://www.xbox.com/en-US/xbox-game-studios"
 };
 
+var b6Title="Strategy/Maps/Clues";
+var b6={
+"Map Genie":"https://mapgenie.io/",
+"Strategy Wiki":"https://strategywiki.org/"
+};
 
 
 function block(title, content, body) {
@@ -169,6 +174,11 @@ document.write(bigScreen());
 	</TD>
 </TR>	
 
+<TR>
+	<TD>
+		<script>document.write(block(b6Title,b6, false));</script> <!-- Strategy/Maps/Clues -->
+	</TD>
+</TR>
 
 </TABLE>
 <!-- END RIGHT COL -->
