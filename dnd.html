@@ -86,7 +86,8 @@ var b2={
 "D&D Beyond - My Encounters":"https://www.dndbeyond.com/my-encounters",
 "D&D Beyond - My Homebrew Creations":"https://www.dndbeyond.com/my-creations?sort=-date-modified",
 "D&D Beyond - Encounter of the Week Archive":"https://www.dndbeyond.com/tag/encounter-of-the-week",
-"D&D Beyond - Support":"https://dndbeyond-support.wizards.com/hc/en-us"
+"D&D Beyond - Support":"https://dndbeyond-support.wizards.com/hc/en-us",
+"DMs Guild":"https://www.dmsguild.com/"
 };
 
 var b6Title="Virtual Tabletops";
@@ -134,6 +135,14 @@ var b8={
 "Greyhawk Online Zoom Map":"https://greyhawkonline.com/ghmaps/",
 "Greyhawk Interactive Map":"https://www.aidedd.org/atlas/greyhawk",
 "Adventure Module Locations":"http://www.canonfire.com/cf/ghadventures.php"
+};
+
+var b9Title="Older Versions Resources";
+var b9={
+"TSR Archive":"https://www.tsrarchive.com/",	
+"AD&D Toolkit (1e/2e)":"https://adndtoolkit.com/",
+"D&D Tools (3e/3.5e)":"https://dndtools.org/",
+"iPlay4e (4e)","https://iplay4e.appspot.com/"
 };
 
 
@@ -246,7 +255,13 @@ document.write(bigScreen());
 
 <TR>
 	<TD>
-		<script>document.write(block(b4Title,b8, false));</script> <!-- Greyhawk -->
+		<script>document.write(block(b8Title,b8, false));</script> <!-- Greyhawk -->
+	</td>
+</tr>
+
+<TR>
+	<TD>
+		<script>document.write(block(b9Title,b9, false));</script> <!-- Greyhawk -->
 	</td>
 </tr>
 
